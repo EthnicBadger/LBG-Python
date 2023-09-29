@@ -23,8 +23,11 @@ pipeline {
       stage('run unit tests') {
             steps {
                 sh ''' 
+                
                 echo "installing requirements file"
-                pip3 install -r requirements.txt
+
+                pip install -r requirements.txt
+
                 chmod +x .deploy.sh
                 ./deploy.sh
                 sleep 3
