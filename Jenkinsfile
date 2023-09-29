@@ -11,9 +11,10 @@ pipeline {
       stage('Load script') {
             steps {
                 sh ''' 
-                echo "Hello, Starting the build process"
-                chmod -x .build.sh
-                run .build.sh
+                echo "Hello, Starting script"
+                chmod +x build.sh
+                ./build.sh 
+
                 '''
             }
         }
