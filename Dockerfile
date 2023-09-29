@@ -3,8 +3,7 @@ FROM python:3.11
 # Copy contents into image
  COPY . .
 # install pip dependencies from requirements file
- RUN pip install -r requirements.txt
-# Expose correct port
-EXPOSE 8080
+ RUN pip3 install -r requirements.txt
+ 
 # Create an entrypoint
-ENTRYPOINT ["python","app.py"]
+ENTRYPOINT ["python","lbg.py"]
