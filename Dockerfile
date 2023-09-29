@@ -5,5 +5,8 @@ FROM python:3.11
 # install pip dependencies from requirements file
  RUN pip3 install -r requirements.txt
  
+#set environment veriable
+ENV PORT=8080
+
 # Create an entrypoint
-ENTRYPOINT ["python","lbg.py"]
+ENTRYPOINT python3 lbg.py --PORT ${PORT}
