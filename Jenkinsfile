@@ -13,7 +13,7 @@ pipeline {
                 sh ''' 
                 echo "Hello, Starting the build process"
                 chmod -x .build.sh
-                run build.sh
+                run .build.sh
                 '''
             }
         }
