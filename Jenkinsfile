@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                 echo "start requirements"
-                pip install -r requirements.txt
+                # pip install -r requirements.txt
                 echo "done requirements"
                 chmod +x .deploy.sh
                 ./deploy.sh
